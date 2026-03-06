@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+img {
+    width: 700px;
+    max-width: 90%;
+    margin-top: 100px;
+}
+
+p {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+#choices-container {
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

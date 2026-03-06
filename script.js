@@ -55,7 +55,7 @@ A grandfather clock in the corner of the room ticks, mirroring your rapid heartb
 };
 
 const piano_roomNode = {
-    image: "piano_room/dining_hall.jpg",
+    image: "images/piano_room.jpg",
     text: `You head right, your nerves making you feel queasy, the dust from the ancient relics making you cough.
 You open a heavy door and reveal a room with a minibar in the corner, stocked up with colorful bottles.
 But the piece de resistance is a massive piano in the middle of the room. It's waiting for you to play it.
@@ -63,4 +63,23 @@ The piece waiting for you is Moonlight Sonata. You sit down and play, the keys s
     choices: ["Exit through the right door and go downstairs", "Exit through the left door, enter the center door"],
 };
 
-storyNodes = [diningNode, piano_roomNode, greenhouseNode, kitchenNode];
+storyNodes = [diningNode, piano_roomNode, greenhouseNode, exampleNode];
+
+const imageElement = document.getElementById("image");
+const textElement = document.getElementById("text");
+const choicesContainer = document.getElementById("choices-container");
+
+function displayNode(index) {
+    const node = storyNodes[index];
+    imageElement.src = node.image;
+    textElement.innerText = node.text;
+    choicesContainer.innerHTML = "";
+
+    node.choices.forEach(choice => {
+        const button = document.createElement("button");
+        button.innerText = choice;
+        choicesContainer.appendChild(button);
+    });
+}
+
+displayNode(1);
